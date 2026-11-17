@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>استكشاف الفضاء | رحلة إلى الفضاء</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: #050b1c;
+    color: #fff;
+    line-height: 1.9;
+}
+
+header {
+    background: #09152e;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 1px solid #19365e;
+}
+
+.logo {
+    color: #55c9ff;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #dcecff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #55c9ff;
+}
+
+/* الواجهة الرئيسية */
+
+.hero {
+    min-height: 480px;
+    background:
+    linear-gradient(90deg, #050b1cdd, #07152acc),
+    url("../Image/space.jpg") center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero .small-title {
+    color: #55c9ff;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-size: 46px;
+    font-weight: 800;
+    margin: 12px 0;
+}
+
+.hero h1 span {
+    color: #55c9ff;
+}
+
+.hero p {
+    color: #d0def0;
+    max-width: 650px;
+    font-size: 16px;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 11px 30px;
+    background: #159bd2;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.hero-btn:hover {
+    background: #0875a8;
+    transform: translateY(-3px);
+}
+
+/* العناوين */
+
+.section {
+    max-width: 1150px;
+    margin: auto;
+    padding: 75px 20px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading span {
+    color: #55c9ff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    color: #fff;
+    margin: 5px 0;
+}
+
+.section-heading p {
+    color: #9eb4d0;
+    font-size: 14px;
+}
+
+/* وسائل الاستكشاف */
+
+.methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.method-card {
+    background: #101d38;
+    border: 1px solid #1c385f;
+    border-radius: 15px;
+    padding: 28px;
+    transition: .3s;
+}
+
+.method-card:hover {
+    transform: translateY(-6px);
+    border-color: #55c9ff;
+}
+
+.method-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.method-card h3 {
+    color: #65ccff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.method-card p {
+    color: #bdcce0;
+    font-size: 14px;
+}
+
+/* المحطات التاريخية */
+
+.timeline-section {
+    background: #09152e;
+    padding: 70px 20px;
+}
+
+.timeline {
+    max-width: 900px;
+    margin: 40px auto 0;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: #247ca8;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 0 50px 35px 10px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    background: #55c9ff;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #55c9ff;
+}
+
+.timeline-item .year {
+    color: #55c9ff;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.timeline-item h3 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.timeline-item p {
+    color: #b5c7df;
+    font-size: 14px;
+}
+
+/* الرحلات الفضائية */
+
+.missions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.mission {
+    background: #101d38;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #1c385f;
+    transition: .3s;
+}
+
+.mission:hover {
+    transform: translateY(-6px);
+    border-color: #55c9ff;
+}
+
+.mission img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background: #081329;
+    padding: 15px;
+}
+
+.mission-content {
+    padding: 20px;
+}
+
+.mission-content h3 {
+    color: #65ccff;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.mission-content p {
+    color: #bdcce0;
+    font-size: 14px;
+}
+
+/* المستقبل */
+
+.future {
+    max-width: 1100px;
+    margin: 0 auto 75px;
+    padding: 50px 25px;
+    text-align: center;
+    background: linear-gradient(135deg, #102b4e, #09152e);
+    border: 1px solid #1d4970;
+    border-radius: 18px;
+}
+
+.future h2 {
+    color: #65ccff;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.future p {
+    max-width: 750px;
+    margin: auto;
+    color: #d0def0;
+    font-size: 15px;
+}
+
+/* التذييل */
+
+footer {
+    background: #09152e;
+    border-top: 1px solid #19365e;
+    text-align: center;
+    padding: 22px;
+    color: #91a9c7;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .timeline-item {
+        padding-right: 45px;
+    }
+
+    .future {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">رحلة إلى الفضاء</div>
+
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="planets.html">الكواكب</a>
+        <a href="exploration.html">استكشاف الفضاء</a>
+        <a href="gallery.html">معرض الصور</a>
+        <a href="contact.html">تواصل معنا</a>
+    </nav>
+</header>
+
+<!-- الواجهة الرئيسية -->
+
+<section class="hero">
+    <div class="small-title">اكتشف المجهول</div>
+    <h1>ما وراء حدود <span>الأرض</span></h1>
+    <p>
+        انطلق في رحلة علمية للتعرف على أسرار الفضاء،
+        واكتشف كيف استطاع الإنسان الوصول إلى عوالم بعيدة
+        وفهم أسرار الكون.
+    </p>
+    <a href="#methods" class="hero-btn">ابدأ الاستكشاف</a>
+</section>
+
+<!-- وسائل استكشاف الفضاء -->
+
+<section class="section" id="methods">
+
+    <div class="section-heading">
+        <span>كيف نصل إلى الفضاء؟</span>
+        <h2>وسائل استكشاف الكون</h2>
+        <p>أدوات وتقنيات ساعدت الإنسان على فهم الفضاء واكتشاف أسراره</p>
+    </div>
+
+    <div class="methods">
+
+        <div class="method-card">
+            <div class="method-icon">🛰️</div>
+            <h3>الأقمار الصناعية</h3>
+            <p>
+                تدور حول الأرض وتساعد في الاتصالات
+                ومراقبة الطقس وتصوير سطح الأرض
+                وجمع المعلومات العلمية.
+            </p>
+        </div>
+
+        <div class="method-card">
+            <div class="method-icon">🔭</div>
+            <h3>التلسكوبات الفضائية</h3>
+            <p>
+                تستخدم لرصد النجوم والمجرات والأجرام البعيدة،
+                وتساعد العلماء على دراسة تاريخ الكون.
+            </p>
+        </div>
+
+        <div class="method-card">
+            <div class="method-icon">🚀</div>
+            <h3>المركبات الفضائية</h3>
+            <p>
+                تنقل رواد الفضاء والمعدات العلمية،
+                وتساعد في تنفيذ المهمات والرحلات
+                الاستكشافية خارج الأرض.
+            </p>
+        </div>
+
+        <div class="method-card">
+            <div class="method-icon">🤖</div>
+            <h3>المركبات الروبوتية</h3>
+            <p>
+                تستكشف الأسطح البعيدة مثل سطح المريخ،
+                وتجمع الصور والعينات والبيانات
+                دون الحاجة إلى وجود الإنسان.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- التاريخ -->
+
+<section class="timeline-section">
+
+    <div class="section-heading">
+        <span>من الماضي إلى الحاضر</span>
+        <h2>محطات مهمة في تاريخ الفضاء</h2>
+        <p>إنجازات غيرت نظرة الإنسان إلى الكون</p>
+    </div>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <div class="year">1957</div>
+            <h3>إطلاق أول قمر صناعي</h3>
+            <p>
+                أطلق الاتحاد السوفيتي القمر الصناعي سبوتنيك 1،
+                ليبدأ عصر استكشاف الفضاء.
+            </p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="year">1961</div>
+            <h3>أول إنسان في الفضاء</h3>
+            <p>
+                أصبح يوري غاغارين أول إنسان يسافر إلى الفضاء
+                ويدور حول الأرض.
+            </p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="year">1969</div>
+            <h3>أول هبوط بشري على القمر</h3>
+            <p>
+                نجحت مهمة أبولو 11 في إيصال أول إنسان
+                إلى سطح القمر.
+            </p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="year">1998</div>
+            <h3>بداية بناء محطة الفضاء الدولية</h3>
+            <p>
+                بدأت الدول المشاركة في تجميع محطة فضائية
+                لإجراء التجارب والأبحاث العلمية.
+            </p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="year">2021</div>
+            <h3>إطلاق تلسكوب جيمس ويب</h3>
+            <p>
+                أطلق تلسكوب جيمس ويب الفضائي لدراسة
+                المجرات والنجوم والكواكب البعيدة.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- الرحلات الاستكشافية -->
+
+<section class="section">
+
+    <div class="section-heading">
+        <span>رحلات خارج كوكبنا</span>
+        <h2>أبرز وجهات الاستكشاف</h2>
+        <p>أماكن وصل إليها الإنسان أو أرسل إليها مهمات علمية</p>
+    </div>
+
+    <div class="missions">
+
+        <div class="mission">
+            <img src="../Textures/2k_mars.jpg" alt="المريخ">
+            <div class="mission-content">
+                <h3>استكشاف المريخ</h3>
+                <p>
+                    أرسلت وكالات الفضاء مركبات روبوتية
+                    إلى المريخ لدراسة تضاريسه ومناخه
+                    والبحث عن آثار للماء والحياة القديمة.
+                </p>
+            </div>
+        </div>
+
+        <div class="mission">
+            <img src="../Image/earth.jpeg" alt="الأرض والقمر">
+            <div class="mission-content">
+                <h3>الرحلات إلى القمر</h3>
+                <p>
+                    مثلت رحلات أبولو خطوة تاريخية
+                    في استكشاف الفضاء، وأسهمت في
+                    دراسة سطح القمر وجمع عينات منه.
+                </p>
+            </div>
+        </div>
+
+        <div class="mission">
+            <img src="../Image/space.jpg" alt="الفضاء ومحطة الفضاء">
+            <div class="mission-content">
+                <h3>محطة الفضاء الدولية</h3>
+                <p>
+                    مختبر علمي يدور حول الأرض،
+                    يعمل فيه رواد فضاء من دول مختلفة
+                    لإجراء تجارب وأبحاث علمية.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- المستقبل -->
+
+<section class="future">
+    <h2>مستقبل استكشاف الفضاء</h2>
+    <p>
+        لا تتوقف رحلة الإنسان عند الاكتشافات الحالية،
+        بل تستمر الأبحاث لتطوير تقنيات السفر إلى القمر والمريخ،
+        ودراسة الكواكب البعيدة والبحث عن علامات للحياة خارج الأرض.
+        وربما تحمل السنوات القادمة اكتشافات تغير فهمنا للكون.
+    </p>
+</section>
+
+<footer>
+    جميع الحقوق محفوظة © 2026
+</footer>
+
+</body>
+</html>

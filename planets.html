@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كواكب المجموعة الشمسية</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: #050b1c;
+    color: white;
+    line-height: 1.8;
+}
+
+header {
+    background: #09152e;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 1px solid #19365e;
+}
+
+.logo {
+    color: #55c9ff;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #dcecff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #55c9ff;
+}
+
+.hero {
+    text-align: center;
+    padding: 65px 20px 35px;
+}
+
+.hero h1 {
+    color: #62caff;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #b5c7df;
+}
+
+.planets {
+    max-width: 1150px;
+    margin: auto;
+    padding: 25px 20px 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #101d38;
+    border: 1px solid #1c385f;
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: center;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #55c9ff;
+    box-shadow: 0 10px 30px #0008;
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: contain;
+    padding: 15px;
+    background: #081329;
+}
+
+.card h2 {
+    color: #65ccff;
+    font-size: 22px;
+    font-weight: 800;
+    margin: 12px 0 5px;
+}
+
+.card p {
+    color: #bdcce0;
+    font-size: 14px;
+    padding: 0 17px 22px;
+}
+
+footer {
+    background: #09152e;
+    text-align: center;
+    padding: 22px;
+    color: #91a9c7;
+    border-top: 1px solid #19365e;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">رحلة إلى الفضاء</div>
+
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="planets.html">الكواكب</a>
+        <a href="exploration.html">استكشاف الفضاء</a>
+        <a href="gallery.html">معرض الصور</a>
+        <a href="contact.html">تواصل معنا</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>كواكب المجموعة الشمسية</h1>
+    <p>اكتشف الكواكب الثمانية وتعرّف على خصائصها ومميزاتها</p>
+</section>
+
+<section class="planets">
+
+    <div class="card">
+        <img src="../Image/mercury.jpg" alt="عطارد">
+        <h2>عطارد</h2>
+        <p>أقرب الكواكب إلى الشمس، ويتميز بصغر حجمه ودرجات حرارته المتفاوتة.</p>
+    </div>
+
+    <div class="card">
+        <img src="../Textures/2k_venus_surface.jpg" alt="الزهرة">
+        <h2>الزهرة</h2>
+        <p>ثاني كواكب المجموعة الشمسية، ويتميز بغلاف جوي كثيف وحرارة مرتفعة.</p>
+    </div>
+
+    <div class="card">
+        <img src="../Image/earth.jpeg" alt="الأرض">
+        <h2>الأرض</h2>
+        <p>كوكب الحياة، ويتميز بوجود الماء والغلاف الجوي المناسب للكائنات الحية.</p>
+    </div>
+
+    <div class="card">
+        <img src="../Textures/2k_mars.jpg" alt="المريخ">
+        <h2>المريخ</h2>
+        <p>يعرف بالكوكب الأحمر بسبب لون سطحه الناتج عن أكاسيد الحديد.</p>
+    </div>
+
+    <div class="card">
+        <img src="../Textures/2k_jupiter.jpg" alt="المشتري">
+        <h2>المشتري</h2>
+        <p>أكبر كواكب المجموعة الشمسية، ويشتهر بالبقعة الحمراء العظيمة.</p>
+    </div>
+
+    <div class="card">
+        <img src="../Image/saturn.jpeg" alt="زحل">
+        <h2>زحل</h2>
+        <p>يشتهر بحلقاته الواسعة والجميلة التي تحيط به.</p>
+    </div>
+
+    <div class="card">
+        <img src="../Image/uranus.avif" alt="أورانوس">
+        <h2>أورانوس</h2>
+        <p>كوكب جليدي عملاق يتميز بلونه الأزرق المائل إلى الأخضر.</p>
+    </div>
+
+    <div class="card">
+        <img src="../Image/neptune.jpg" alt="نبتون">
+        <h2>نبتون</h2>
+        <p>أبعد كواكب المجموعة الشمسية عن الشمس، ويتميز بلونه الأزرق.</p>
+    </div>
+
+</section>
+
+<footer>
+    جميع الحقوق محفوظة © 2026
+</footer>
+
+</body>
+</html>

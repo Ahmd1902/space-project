@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>عالم الفضاء والكواكب</title>
+
+    <!-- الخط العربي -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            background-color: #080d25;
+            color: white;
+        }
+
+        header {
+            background: #101a3b;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            color: #73caff;
+            font-size: 34px;
+            margin: 0;
+        }
+
+        header p {
+            color: #d0d9ed;
+            margin: 5px;
+        }
+
+        nav {
+            background: #192750;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 15px;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #73caff;
+        }
+
+        .main {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .main h2 {
+            color: #73caff;
+            font-size: 29px;
+        }
+
+        .main p {
+            color: #d5dcef;
+            font-size: 17px;
+            line-height: 2;
+            max-width: 750px;
+            margin: 15px auto;
+        }
+
+        .main img {
+            width: 90%;
+            max-width: 750px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 18px;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #287fc1;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #145c91;
+        }
+
+        footer {
+            background: #101a3b;
+            text-align: center;
+            padding: 18px;
+            color: #b8c6df;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            .main img {
+                height: 230px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>عالم الفضاء والكواكب</h1>
+        <p>رحلة ممتعة لاكتشاف أسرار الكون</p>
+    </header>
+
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="planets.html">الكواكب</a>
+        <a href="exploration.html">استكشاف الفضاء</a>
+        <a href="gallery.html">معرض الصور</a>
+        <a href="contact.html">تواصل معنا</a>
+    </nav>
+
+    <div class="main">
+
+        <h2>مرحباً بك في عالم الفضاء</h2>
+
+        <p>
+            الفضاء عالم واسع ومليء بالأسرار والعجائب،
+            يحتوي على النجوم والكواكب والمجرات.
+            ومن خلال هذا الموقع سنتعرف على المجموعة الشمسية
+            ونكتشف معلومات ممتعة عن الكواكب الثمانية.
+        </p>
+
+        <img src="../Image/space.jpg" alt="صورة الفضاء">
+
+        <h2>اكتشف المجموعة الشمسية</h2>
+
+        <p>
+            انطلق معنا في رحلة تعليمية للتعرف على الكواكب
+            وأهم خصائصها، واستكشاف جمال الكون الواسع.
+        </p>
+
+        <a class="button" href="planets.html">اكتشف الكواكب</a>
+
+    </div>
+
+    <footer>
+        جميع الحقوق محفوظة © 2026
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض صور الفضاء</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: #050b1a;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 55px 20px;
+            background:
+                linear-gradient(rgba(5,11,26,0.5), rgba(5,11,26,0.95)),
+                url('../Image/space.jpg') center/cover;
+        }
+
+        header h1 {
+            color: #65d9ff;
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            color: #c5d6e9;
+            font-size: 15px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 22px;
+            padding: 9px 24px;
+            border: 1px solid #45cfff;
+            border-radius: 25px;
+            color: #65d9ff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back:hover {
+            background: #45cfff;
+            color: #050b1a;
+        }
+
+        .gallery-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 45px auto 70px;
+        }
+
+        .gallery-title {
+            text-align: center;
+            color: #65d9ff;
+            font-size: 27px;
+            margin-bottom: 30px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 22px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            border: 1px solid rgba(80,190,255,0.2);
+            cursor: pointer;
+            background: #101e37;
+            transition: 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-6px);
+            border-color: #45cfff;
+            box-shadow: 0 8px 25px rgba(0,180,255,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .caption {
+            padding: 14px;
+            text-align: center;
+            color: #65d9ff;
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(0,0,0,0.93);
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 12px;
+            border: 2px solid #45cfff;
+            object-fit: contain;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .close:hover {
+            color: #65d9ff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 22px;
+            color: #8298b5;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            font-size: 13px;
+        }
+
+        @media(max-width: 600px) {
+            header h1 {
+                font-size: 29px;
+            }
+
+            .gallery-container {
+                width: 94%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>معرض صور الفضاء</h1>
+    <p>مجموعة من الصور التي تأخذك في رحلة بين كواكب ونجوم الكون</p>
+    <a href="index.html" class="back">العودة للرئيسية</a>
+</header>
+
+<main class="gallery-container">
+
+    <h2 class="gallery-title">كواكب المجموعة الشمسية</h2>
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img src="../Textures/2k_mercury.jpg" alt="عطارد">
+            <div class="caption">عطارد</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="../Textures/2k_venus_surface.jpg" alt="الزهرة">
+            <div class="caption">الزهرة</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="../Textures/2k_earth_daymap.jpg" alt="الأرض">
+            <div class="caption">الأرض</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="../Textures/2k_mars.jpg" alt="المريخ">
+            <div class="caption">المريخ</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="../Textures/2k_jupiter.jpg" alt="المشتري">
+            <div class="caption">المشتري</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="../Textures/2k_saturn.jpg" alt="زحل">
+            <div class="caption">زحل</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="../Textures/2k_uranus.jpg" alt="أورانوس">
+            <div class="caption">أورانوس</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="../Textures/2k_neptune.jpg" alt="نبتون">
+            <div class="caption">نبتون</div>
+        </div>
+
+    </div>
+
+    <h2 class="gallery-title" style="margin-top:60px;">صور من الفضاء الخارجي</h2>
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800" alt="مجرة">
+            <div class="caption">المجرات</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?w=800" alt="النجوم">
+            <div class="caption">النجوم</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=800" alt="الأرض من الفضاء">
+            <div class="caption">الأرض من الفضاء</div>
+        </div>
+
+    </div>
+
+</main>
+
+<div class="lightbox" id="lightbox">
+    <button class="close" id="closeBtn" aria-label="إغلاق">&times;</button>
+    <img src="" alt="صورة مكبرة" id="lightboxImage">
+</div>
+
+<footer>
+    جميع الحقوق محفوظة © 2026
+</footer>
+
+<script>
+    const items = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const closeBtn = document.getElementById('closeBtn');
+
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            const image = item.querySelector('img');
+
+            lightboxImage.src = image.src;
+            lightboxImage.alt = image.alt;
+
+            lightbox.classList.add('active');
+        });
+    });
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        lightboxImage.src = '';
+    }
+
+    closeBtn.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeLightbox();
+        }
+    });
+</script>
+
+</body>
+</html>
